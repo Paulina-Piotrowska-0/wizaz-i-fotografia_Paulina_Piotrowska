@@ -1,0 +1,2812 @@
+  <!DOCTYPE html>
+  <html lang="pl">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wizaż & Fotografia Paulina Piotrowska</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+:root{
+  --bg:#f5f5f5;
+  --white:#ffffff;
+  --text:#111111;
+  --muted:#6f6f6f;
+  --line:#dddddd;
+
+  --accent:#8ea6bf; /* subtelny błękit */
+  --silver:#c9c9c9;
+
+  --shadow:0 20px 50px rgba(0,0,0,.08);
+}
+
+  *{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+  }
+
+  html{
+    scroll-behavior:smooth;
+  }
+
+  body{
+    font-family:Inter,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+  }
+
+  section{
+    padding:90px 7%;
+  }
+
+  h1,h2,h3{
+    font-family:"Cormorant Garamond",serif;
+  }
+
+  .label{
+    color:var(--rose2);
+    font-size:13px;
+    letter-spacing:4px;
+    font-weight:700;
+    text-align:center;
+    text-transform:uppercase;
+  }
+
+  .title{
+    font-size:46px;
+    text-align:center;
+    margin-top:8px;
+    font-weight:600;
+  }
+
+  .btn{
+    border:none;
+    padding:15px 28px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:700;
+    font-size:14px;
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    transition:.3s;
+  }
+
+  .btn-primary{
+    background:linear-gradient(135deg,#d96f82,#c85f72);
+    color:white;
+    box-shadow:0 12px 25px rgba(200,95,114,.3);
+  }
+
+  .btn-outline{
+    background:rgba(255,255,255,.08);
+    color:white;
+    border:1px solid rgba(255,255,255,.65);
+  }
+
+  .btn:hover{
+    transform:translateY(-2px);
+  }
+
+  /* NAV */
+  header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    padding:20px 7%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    transition:.3s;
+  }
+.contact-wrap{
+  max-width:1200px;
+  margin:40px auto 0;
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:35px;
+  align-items:stretch;
+}
+  header.scrolled{
+    background:rgba(40,28,30,.88);
+    backdrop-filter:blur(14px);
+    padding:13px 7%;
+  }
+
+  .logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:white;
+  }
+
+  .logo-mark{
+    font-family:"Playfair Display",serif;
+    font-size:48px;
+    color:#e39aa3;
+    font-style:italic;
+    line-height:1;
+  }
+
+  .logo-text{
+    font-family:"Playfair Display",serif;
+    font-size:19px;
+    line-height:1.15;
+  }
+
+  nav{
+    display:flex;
+    gap:38px;
+  }
+
+  nav a{
+    color:white;
+    text-decoration:none;
+    font-size:13px;
+    font-weight:600;
+    opacity:.9;
+  }
+
+  nav a.active{
+    color:#f2a5ae;
+  }
+
+  /* HERO */
+  .hero{
+    min-height:720px;
+    background:
+      linear-gradient(90deg,rgba(20,17,18,.82) 0%,rgba(40,25,27,.6) 42%,rgba(40,20,20,.08) 100%),
+      url("hero.png");
+    background-size:cover;
+    background-position:center right;
+    display:flex;
+    align-items:center;
+    padding:0 7%;
+  }
+
+  .hero-content{
+    max-width:900px;
+    color:white;
+    margin-top:60px;
+  }
+
+  .hero h1{
+    text-shadow:0 8px 30px rgba(0,0,0,.25);
+    font-size:72px;
+    line-height:1.08;
+    font-weight:600;
+  }
+
+  .hero h1 span{
+     color:white !important;
+  }
+
+  .hero p{
+    margin:30px 0;
+    font-size:20px;
+    line-height:1.6;
+    color:#eee;
+  }
+
+  .hero-actions{
+    display:flex;
+    gap:18px;
+  }
+
+  /* ABOUT */
+.about{
+  background:#f4f5f6;
+}
+
+  .about-wrap{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+  }
+.about-img{
+  display:flex;
+  justify-content:center;
+}
+
+.about-img img{
+  width:100%;
+  max-width:420px; /* kluczowe */
+  height:auto;
+  object-fit:contain;
+  border-radius:18px;
+  box-shadow:0 20px 50px rgba(130,80,75,.15);
+}
+
+  .about-text .label{
+    text-align:left;
+  }
+
+  .about-text h2{
+    font-size:46px;
+    margin:12px 0 28px;
+  }
+
+  .about-text h2 span{
+    color:var(--rose);
+  }
+
+  .decor{
+    color:var(--rose2);
+    font-size:28px;
+    margin-bottom:22px;
+  }
+
+  .about-text p{
+    color:#555;
+    line-height:1.8;
+    margin-bottom:18px;
+    max-width:540px;
+  }
+
+  .signature{
+    margin-top:22px;
+    font-family:"Great Vibes",cursive;
+    font-size:44px;
+    color:#7b6a68;
+  }
+
+  .sign-small{
+    font-size:12px;
+    letter-spacing:3px;
+    color:#777;
+  }
+
+  /* OFFER */
+  .offer{
+    background:linear-gradient(#fff8f6,#fff);
+  }
+
+ .cards{
+  margin-top:60px;
+  max-width:1400px; /* 🔥 KLUCZOWE */
+  margin-left:auto;
+  margin-right:auto;
+
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+
+  .card{
+    overflow:hidden;
+position:relative;
+    background:white;
+    border:1px solid var(--line);
+    border-radius:30px;
+    padding:34px 26px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(100,70,70,.05);
+    transition:.3s;
+  }
+
+  .card:hover{
+    transform:translateY(-5px);
+    box-shadow:var(--shadow);
+  }
+
+  .icon{
+    width:72px;
+    height:72px;
+    background:#f8e4e1;
+    color:#d4877f;
+    border-radius:50%;
+    margin:0 auto 20px;
+    display:grid;
+    place-items:center;
+    font-size:30px;
+  }
+
+  .card h3{
+    font-size:22px;
+    margin-bottom:10px;
+    
+
+  }
+.card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg,rgba(255,255,255,.35),transparent);
+  pointer-events:none;
+}
+  .card p{
+    color:#666;
+    font-size:14px;
+    line-height:1.6;
+  }
+
+  .price{
+    display:block;
+    margin-top:14px;
+    font-family:"Playfair Display",serif;
+    color:var(--rose);
+    font-size:24px;
+  }
+
+  .center{
+    text-align:center;
+    margin-top:35px;
+  }
+
+  /* PORTFOLIO */
+  .portfolio{
+    background:white;
+  }
+
+  .filters{
+    margin:28px auto 35px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+  }
+
+  .filter{
+    border:none;
+    background:transparent;
+    cursor:pointer;
+    color:#555;
+    font-weight:600;
+    padding:8px 16px;
+    border-radius:20px;
+  }
+
+  .filter.active{
+    background:#d96f82;
+    color:white;
+  }
+
+.gallery{
+  max-width:1500px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.gallery img{
+  width:100%;
+aspect-ratio:3 / 3.7;
+  height:auto;
+  object-fit:cover;
+  object-position:center top;
+  border-radius:14px;
+  cursor:pointer;
+  transition:.3s;
+  box-shadow:0 14px 35px rgba(130,80,75,.10);
+}
+
+.gallery img:hover{
+  transform:translateY(-4px);
+  box-shadow:0 20px 45px rgba(130,80,75,.16);
+}
+
+
+ /* WHY */
+.why{
+  position:relative;
+  background:#fff;
+  overflow:hidden;
+  padding:80px 7% 95px;
+}
+
+.why::before{
+  content:"";
+  position:absolute;
+  left:-90px;
+  top:150px;
+  width:270px;
+  height:230px;
+  background:
+    repeating-linear-gradient(
+      18deg,
+      rgba(232,162,169,.22) 0px,
+      rgba(232,162,169,.22) 3px,
+      transparent 3px,
+      transparent 9px
+    );
+  border-radius:50%;
+  transform:rotate(-12deg);
+}
+
+.why::after{
+  content:"";
+  position:absolute;
+  right:-80px;
+  top:250px;
+  width:270px;
+  height:230px;
+  background:
+    repeating-linear-gradient(
+      -18deg,
+      rgba(232,162,169,.20) 0px,
+      rgba(232,162,169,.20) 3px,
+      transparent 3px,
+      transparent 9px
+    );
+  border-radius:50%;
+  transform:rotate(12deg);
+}
+
+.why .title{
+  font-size:48px;
+  margin-top:8px;
+  position:relative;
+}
+
+.why .title::after{
+  content:"♡";
+  display:block;
+  color:#e8a2a9;
+  font-size:22px;
+  margin-top:14px;
+  position:relative;
+}
+
+.why .title::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom:-24px;
+  transform:translateX(-50%);
+  width:170px;
+  height:1px;
+  background:linear-gradient(90deg, transparent, #ead0cc 35%, transparent 35%, transparent 65%, #ead0cc 65%, transparent);
+}
+
+.why-grid{
+  margin-top:70px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:0;
+  position:relative;
+  z-index:2;
+}
+
+.why-item{
+  text-align:center;
+  padding:0 55px;
+  position:relative;
+}
+
+.why-item:not(:last-child)::after{
+  content:"";
+  position:absolute;
+  right:0;
+  top:95px;
+  width:1px;
+  height:135px;
+  background:#f0d8d5;
+}
+
+.why-item .icon{
+  width:120px;
+  height:120px;
+  border:1px solid #f0d8d5;
+  background:#fffafa;
+  border-radius:50%;
+  margin:0 auto 40px;
+  display:grid;
+  place-items:center;
+}
+
+.why-item .icon img{
+  width:112px;
+  height:112px;
+  object-fit:contain;
+}
+
+.why-item h3{
+  font-size:25px;
+  margin:0 0 18px;
+  font-weight:600;
+}
+
+.why-item p{
+  color:#686061;
+  line-height:1.8;
+  font-size:15px;
+  max-width:360px;
+  margin:0 auto;
+}
+
+  /* TESTIMONIALS */
+/* TESTIMONIALS */
+.testimonials{
+  position:relative;
+  background:
+    radial-gradient(circle at left 35%, rgba(232,162,169,.12), transparent 28%),
+    radial-gradient(circle at right 55%, rgba(207,111,128,.10), transparent 26%),
+    #fff;
+  overflow:hidden;
+  padding:95px 7% 105px;
+}
+
+.testimonials .label{
+  color:#df8f99;
+  margin-bottom:18px;
+}
+
+.testimonials .title{
+  max-width:760px;
+  margin:0 auto;
+  font-size:52px;
+  line-height:1.14;
+}
+
+.testimonials .title span{
+  color:var(--rose);
+  font-style:italic;
+  font-weight:500;
+}
+
+.testimonials-subtitle{
+  text-align:center;
+  margin:20px auto 0;
+  color:#6f696a;
+  font-size:16px;
+  line-height:1.7;
+}
+
+.testimonial-wrap{
+  max-width:1180px;
+  margin:70px auto 0;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+}
+
+.opinion{
+  position:relative;
+  min-height:330px;
+  background:rgba(255,255,255,.92);
+  border:1px solid #efd9d4;
+  border-radius:18px;
+  padding:68px 34px 34px;
+  text-align:center;
+  box-shadow:0 20px 45px rgba(130,80,75,.10);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.opinion.featured{
+  border:2px solid #dfb074;
+}
+
+.quote{
+  position:absolute;
+  top:-38px;
+  left:50%;
+  transform:translateX(-50%);
+  width:78px;
+  height:78px;
+  border-radius:50%;
+  background:#fff8f6;
+  border:1px solid #efc9c3;
+  color:#c96f6f;
+  display:grid;
+  place-items:center;
+  font-size:44px;
+  font-family:"Playfair Display",serif;
+  box-shadow:0 12px 28px rgba(130,80,75,.10);
+}
+
+.opinion p{
+  color:#454142;
+  font-size:16px;
+  line-height:1.75;
+}
+
+.opinion-line{
+  width:120px;
+  height:1px;
+  background:#eadbd8;
+  margin:24px auto;
+}
+
+.stars{
+  color:#d89a43;
+  font-size:19px;
+  letter-spacing:2px;
+  margin-bottom:18px;
+}
+
+.opinion strong{
+  font-family:"Playfair Display",serif;
+  font-size:30px;
+  color:#2d2a2b;
+}
+
+.opinion small{
+  display:block;
+  margin-top:10px;
+
+  color:#4f5358;
+
+  font-size:11px;
+  font-weight:700;
+
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+
+  opacity:.9;
+}
+
+@media(max-width:1000px){
+  .testimonial-wrap{
+    grid-template-columns:1fr;
+    gap:60px;
+  }
+
+  .testimonials .title{
+    font-size:40px;
+  }
+}
+  .contact{
+    background:linear-gradient(#fff8f6,#fff);
+  }
+  .dot.active{
+    background:#d96f82;
+  }
+
+.contact{
+  position:relative;
+  background:
+    url("kwiaty.png") 10% 76% no-repeat,
+    url("pedzle.png") 89% 82% no-repeat,
+    linear-gradient(#fff8f6,#fff);
+  background-size:260px,260px,auto;
+}
+
+.contact-wrap{
+  margin-top:40px;
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:35px;
+  align-items:stretch;
+}
+
+.contact-card,
+.contact form{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:8px;
+  box-shadow:var(--shadow);
+  padding:32px;
+}
+
+.contact-row{
+  display:flex;
+  gap:14px;
+  margin:18px 0;
+  color:#555;
+}
+
+.contact-row i{
+  color:#d96f82;
+  width:20px;
+}
+  .socials{
+    display:flex;
+    gap:12px;
+    margin:22px 0;
+  }
+
+  .socials a{
+    width:36px;
+    height:36px;
+    border-radius:50%;
+    background:#d96f82;
+    color:white;
+    display:grid;
+    place-items:center;
+    text-decoration:none;
+  }
+
+  .contact-buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+  }
+
+  .form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+  }
+
+  input,select,textarea{
+    width:100%;
+    border:1px solid #eadbd8;
+    padding:15px;
+    border-radius:4px;
+    font-family:Inter,sans-serif;
+    outline:none;
+  }
+
+  textarea{
+    grid-column:1/-1;
+    height:130px;
+    resize:none;
+  }
+
+  form .btn{
+    margin-top:18px;
+  }
+
+  .success{
+    display:none;
+    margin-top:15px;
+    color:#198754;
+    font-weight:700;
+  }
+.hero .btn{
+  padding:18px 36px;
+  font-size:16px;
+  border-radius:10px;
+}
+.hero-actions{
+  display:flex;
+  gap:24px;
+}
+.gallery img{
+  display:none;
+}
+
+.gallery img.visible{
+  display:block;
+}
+  /* FOOTER */
+  footer{
+    background:white;
+    border-top:1px solid var(--line);
+  }
+
+  .footer-main{
+    padding:28px 7%;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    gap:30px;
+    align-items:center;
+  }
+
+  .footer-logo{
+    color:#2d2a2b;
+  }
+
+  .footer-logo .logo-mark{
+    color:#d96f82;
+  }
+
+  .footer-main p{
+    font-size:13px;
+    color:#666;
+    line-height:1.7;
+  }
+
+  .footer-bottom{
+    background:#cf6f80;
+    color:white;
+    text-align:center;
+    padding:12px;
+    font-size:12px;
+  }
+
+  /* LIGHTBOX */
+  .lightbox{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.85);
+    z-index:2000;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:30px;
+  }
+
+  .lightbox img{
+    max-width:90%;
+    max-height:90vh;
+    border-radius:10px;
+  }
+
+  .lightbox span{
+    position:absolute;
+    top:25px;
+    right:35px;
+    color:white;
+    font-size:42px;
+    cursor:pointer;
+  }
+
+  /* RESPONSIVE */
+  @media(max-width:1000px){
+    nav{
+      display:none;
+    }
+    .hero h1{
+      font-size:54px;
+    }
+
+    .about-wrap,
+    .contact-wrap{
+      grid-template-columns:1fr;
+    }
+
+    .cards{
+      grid-template-columns:repeat(2,1fr);
+    }
+
+    .gallery{
+      grid-template-columns:repeat(2,1fr);
+    }
+
+    .why-grid,
+    .testimonial-wrap{
+      grid-template-columns:1fr;
+    }
+
+    .footer-main{
+      grid-template-columns:1fr 1fr;
+    }
+  }
+
+  @media(max-width:650px){
+      .testimonials{
+    padding:75px 6% 85px;
+  }
+
+  .testimonials .title{
+    font-size:34px;
+  }
+
+  .opinion{
+    min-height:auto;
+    padding:62px 24px 30px;
+  }
+
+  .opinion p{
+    font-size:15px;
+  }
+     .why .title{
+    font-size:36px;      /* trochę mniejszy */
+    line-height:1.2;
+    max-width:320px;     /* kontrola łamania */
+    margin-left:auto;
+    margin-right:auto;
+  }
+     .gallery{
+    grid-template-columns:1fr;
+  }
+
+  .gallery img{
+    aspect-ratio:3 / 4;
+    height:auto;
+  }
+    .why::before,
+.why::after{
+  display:none;
+}
+    .why-grid{
+  grid-template-columns:1fr;
+  gap:45px;
+}
+
+.why-item:not(:last-child)::after{
+  display:none;
+}
+
+.why-item{
+  padding:0;
+}
+    header{
+      padding:14px 5%;
+    }
+
+    .logo-mark{
+      font-size:38px;
+    }
+
+    .logo-text{
+      font-size:15px;
+    }
+
+    header .btn{
+      display:none;
+    }
+
+    .hero{
+      min-height:680px;
+      padding:0 6%;
+      background-position:68% center;
+    }
+
+    .hero h1{
+      font-size:42px;
+    }
+
+    .hero p{
+      font-size:16px;
+    }
+  .about-img img{
+    height:300px;
+    border-radius:16px;
+  }
+    .hero-actions{
+      flex-direction:column;
+      align-items:flex-start;
+    }
+
+    section{
+      padding:65px 6%;
+    }
+
+    .title{
+      font-size:34px;
+    }
+
+    .about-text h2{
+      font-size:34px;
+    }
+
+    .cards,
+    .gallery,
+    .form-grid,
+    .footer-main{
+      grid-template-columns:1fr;
+    }
+
+.gallery img{
+  width:100%;
+  aspect-ratio:auto;
+  height:auto;
+  object-fit:contain;
+  object-position:center;
+  background:#fff8f6;
+}
+  }
+  .icon img{
+  width:65px;
+  height:65px;
+  object-fit:contain;
+  display:block;
+}
+@media(max-width:1000px){
+  .about-wrap{
+    display:flex;
+    flex-direction:column;
+  }
+
+  .about-text{
+    order:1;
+  }
+
+  .about-img{
+    order:2;
+  }
+}
+.logo{
+  text-decoration:none;
+  cursor:pointer;
+}
+@media(max-width:1000px){
+  .contact{
+    background:linear-gradient(#fff8f6,#fff);
+  }
+
+  .contact-wrap{
+    grid-template-columns:1fr;
+  }
+
+  .contact-card,
+  .contact form{
+    padding:26px 22px;
+  }
+
+  .contact-buttons,
+  .form-grid{
+    grid-template-columns:1fr;
+  }
+
+  .contact form .btn{
+    width:100%;
+  }
+
+  .footer-main{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .footer-main .socials{
+    justify-content:center;
+  }
+}
+.menu-toggle{
+  display:none;
+  width:44px;
+  height:44px;
+  border:none;
+  border-radius:50%;
+  background:rgba(255,255,255,.14);
+  color:white;
+  font-size:20px;
+  cursor:pointer;
+}
+
+.show-more-portfolio{
+  display:inline-flex;
+  margin-top:28px;
+}
+
+@media(max-width:650px){
+  .menu-toggle{
+    display:grid;
+    place-items:center;
+  }
+
+  nav{
+    position:absolute;
+    top:72px;
+    left:6%;
+    right:6%;
+    background:rgba(40,28,30,.96);
+    backdrop-filter:blur(14px);
+    border:1px solid rgba(255,255,255,.14);
+    border-radius:16px;
+    padding:18px;
+    display:none;
+    flex-direction:column;
+    gap:0;
+  }
+
+  nav.open{
+    display:flex;
+  }
+
+  nav a{
+    padding:14px 10px;
+    font-size:15px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+
+  nav a:last-child{
+    border-bottom:none;
+  }
+
+  .header-btn{
+    display:none;
+  }
+
+
+
+  .gallery.open img{
+    display:block;
+  }
+
+}
+@media(max-width:650px){
+  .hero{
+    background:
+      linear-gradient(
+        90deg,
+        rgba(18,12,13,.92) 0%,
+        rgba(30,18,20,.82) 48%,
+        rgba(30,18,20,.35) 100%
+      ),
+      url("hero.png");
+    background-size:cover;
+    background-position:62% center;
+  }
+
+  .hero-content{
+    max-width:100%;
+    position:relative;
+    z-index:2;
+  }
+
+  .hero h1{
+   text-shadow:0 8px 30px rgba(0,0,0,.25);
+
+    
+  }
+
+  .hero p{
+    color:#fff;
+    text-shadow:0 3px 14px rgba(0,0,0,.45);
+  }
+}
+.training-section{
+  padding:110px 20px;
+  background:#fffaf8;
+}
+
+.training-container{
+  max-width:1280px;
+  margin:0 auto;
+  text-align:center;
+}
+
+.section-heading span{
+  display:block;
+  font-size:13px;
+  letter-spacing:5px;
+  text-transform:uppercase;
+  color:#d98691;
+  font-weight:700;
+  margin-bottom:14px;
+}
+
+.section-heading h2{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(38px,4vw,62px);
+  line-height:1.05;
+  color:#2d2526;
+  margin-bottom:18px;
+}
+
+.section-heading p{
+  max-width:680px;
+  margin:0 auto 62px;
+  font-size:16px;
+  line-height:1.8;
+  color:#7c6f70;
+}
+
+.training-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:26px;
+  margin-bottom:42px;
+}
+
+.training-card{
+  position:relative;
+  background:#fff;
+  border:1px solid #f0d8d5;
+  border-radius:30px;
+  padding:54px 38px 44px;
+  min-height:330px;
+  box-shadow:0 24px 70px rgba(75,40,45,.07);
+  transition:.3s ease;
+}
+
+.training-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 34px 90px rgba(75,40,45,.12);
+  border-color:#e8b7b3;
+}
+
+.training-card.featured{
+  border:1.5px solid #d99a63;
+  box-shadow:0 34px 90px rgba(190,120,90,.15);
+}
+
+.badge{
+  position:absolute;
+  top:24px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#d99a63;
+  color:#fff;
+  padding:9px 18px;
+  border-radius:999px;
+  font-size:11px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.4px;
+}
+
+.icon{
+  width:72px;
+  height:72px;
+  margin:8px auto 26px;
+  border-radius:50%;
+  background:#fff4f2;
+  border:8px solid #fae6e3;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#d87984;
+  font-size:24px;
+}
+
+.training-card h3{
+  font-family:'Playfair Display',serif;
+  font-size:25px;
+  color:#3a3031;
+  margin-bottom:14px;
+}
+
+.training-card p{
+  color:#7c7374;
+  font-size:15px;
+  line-height:1.75;
+  margin-bottom:24px;
+}
+
+.price{
+  font-family:'Playfair Display',serif;
+  color:#d66f82;
+  font-size:26px;
+  font-weight:600;
+}
+
+.training-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  padding:17px 30px;
+  border-radius:12px;
+  background:#cf5f76;
+  color:#fff;
+  text-decoration:none;
+  font-weight:800;
+  box-shadow:0 18px 38px rgba(207,95,118,.26);
+  transition:.25s ease;
+}
+
+.training-btn:hover{
+  transform:translateY(-3px);
+  background:#bd4f67;
+}
+
+@media(max-width:900px){
+  .training-grid{
+    grid-template-columns:1fr;
+  }
+
+  .training-card{
+    min-height:auto;
+  }
+}
+.service-list{
+  max-width:950px;
+  margin:55px auto 0;
+  background:white;
+  border:1px solid var(--line);
+  border-radius:28px;
+  padding:18px;
+  box-shadow:var(--shadow);
+}
+
+.service-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:30px;
+  padding:26px 28px;
+  border-bottom:1px solid var(--line);
+}
+
+.service-row:last-child{
+  border-bottom:none;
+}
+
+.service-row h3{
+  font-size:25px;
+  margin-bottom:8px;
+}
+
+.service-row p{
+  color:#777;
+  line-height:1.6;
+  font-size:15px;
+}
+
+.service-row span{
+  font-family:"Playfair Display",serif;
+  color:var(--rose);
+  font-size:26px;
+  white-space:nowrap;
+}
+
+@media(max-width:650px){
+  .service-row{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:12px;
+    padding:24px 18px;
+  }
+}
+/* === NOWA KOLORYSTYKA: CZERŃ / SZAROŚĆ / SREBRO / BŁĘKIT === */
+
+:root{
+  --bg:#f4f5f6;
+  --white:#ffffff;
+  --text:#111111;
+  --muted:#6f7378;
+  --line:#d9dde1;
+
+  --accent:#4f9fd8;       /* mocniejszy błękit */
+  --accent-dark:#2474aa;  /* ciemniejszy błękit */
+  --silver:#c7ccd1;
+  --dark:#101214;
+
+  --shadow:0 24px 60px rgba(0,0,0,.09);
+}
+
+/* ogólne */
+body{
+  background:var(--bg);
+  color:var(--text);
+}
+
+.label,
+.section-heading span{
+  color:var(--accent);
+}
+
+.title,
+.section-heading h2,
+.about-text h2,
+.training-card h3,
+.service-row h3,
+.why-item h3,
+.opinion strong{
+  color:var(--text);
+}
+
+.about-text h2 span,
+.hero h1 span,
+.testimonials .title span{
+  color:var(--accent);
+}
+
+/* przyciski */
+.btn-primary,
+.training-btn{
+  background:#6aafc9;
+  color:white;
+  box-shadow:0 16px 34px rgba(0,0,0,.18);
+}
+
+.btn-primary:hover,
+.training-btn:hover{
+  background:#2474aa;
+  border-color:#2474aa;
+  transform:translateY(-2px);
+}
+
+.btn-outline{
+  background:rgba(255,255,255,.06);
+  color:white;
+  border:1px solid rgba(255,255,255,.65);
+}
+
+/* header */
+header.scrolled{
+  background:rgba(12,13,15,.88);
+  backdrop-filter:blur(14px);
+}
+
+.logo,
+nav a{
+  color:white;
+}
+
+nav a.active{
+  color:var(--accent);
+}
+
+/* hero */
+.hero{
+  background:
+    linear-gradient(90deg,rgba(0,0,0,.86) 0%,rgba(20,22,24,.62) 46%,rgba(20,22,24,.12) 100%),
+    url("hero.png");
+  background-size:cover;
+  background-position:center right;
+}
+
+.hero h1{
+  color:white;
+}
+
+.hero p{
+  color:#ececec;
+}
+
+/* sekcje */
+.about,
+.portfolio,
+.why,
+.testimonials,
+footer{
+  background:#ffffff;
+}
+
+.offer,
+.training-section,
+.contact{
+  background:linear-gradient(#f4f5f6,#ffffff);
+}
+
+/* karty */
+.card,
+.training-card,
+.service-list,
+.contact-card,
+.contact form,
+.opinion{
+  background:#ffffff;
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+}
+
+/* ikony */
+.icon,
+.why-item .icon{
+  background:#f1f4f7;
+  border-color:#dbe2e8;
+  color:var(--accent-dark);
+}
+
+/* ceny */
+.price,
+.service-row span{
+  color:var(--accent-dark);
+}
+
+/* portfolio filtry */
+.filter{
+  color:#555;
+}
+
+.filter.active{
+  background:#111111;
+  color:white;
+}
+
+/* why dekoracje */
+.why::before,
+.why::after{
+  background:
+    repeating-linear-gradient(
+      18deg,
+      rgba(143,174,199,.18) 0px,
+      rgba(143,174,199,.18) 3px,
+      transparent 3px,
+      transparent 9px
+    );
+}
+
+.why .title::after{
+  color:var(--accent);
+}
+
+.why .title::before,
+.why-item:not(:last-child)::after,
+.opinion-line{
+  background:#d9dde1;
+}
+
+/* opinie */
+.testimonials{
+  background:
+    radial-gradient(circle at left 35%, rgba(143,174,199,.12), transparent 28%),
+    radial-gradient(circle at right 55%, rgba(0,0,0,.06), transparent 26%),
+    #ffffff;
+}
+
+.testimonials .label{
+  color:var(--accent);
+}
+
+.opinion.featured{
+  border:2px solid var(--accent);
+}
+
+.quote{
+  background:#f4f5f6;
+  border:1px solid var(--line);
+  color:#111111;
+}
+
+.stars{
+  color:#9aa3ad;
+}
+
+/* kontakt */
+.contact{
+  background:
+    url("kwiaty.png") 10% 76% no-repeat,
+    url("pedzle.png") 89% 82% no-repeat,
+    linear-gradient(#f4f5f6,#ffffff);
+  background-size:260px,260px,auto;
+}
+
+.contact-row i{
+  color:var(--accent-dark);
+}
+
+.socials a{
+  background:#111111;
+  color:white;
+}
+
+/* formularz */
+input,
+select,
+textarea{
+  border:1px solid var(--line);
+  background:#ffffff;
+  color:#111111;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+  border-color:var(--accent);
+  box-shadow:0 0 0 3px rgba(143,174,199,.18);
+}
+
+/* footer */
+.footer-bottom{
+  background:#111111;
+  color:white;
+}
+
+/* poprawka przycisku "Napisz wiadomość", bo masz inline var(--rose) */
+.contact-buttons .btn:not(.btn-primary){
+  color:var(--accent-dark) !important;
+  border:1px solid var(--line) !important;
+  background:white !important;
+}
+.training-premium{
+  padding:110px 7% 120px;
+  background:#f6f6f7;
+  text-align:center;
+}
+
+.training-heading span{
+  display:block;
+  margin-bottom:18px;
+
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:7px;
+  text-transform:uppercase;
+
+  color:#4c87b5;
+}
+
+.training-heading h2{
+  font-family:"Cormorant Garamond",serif;
+  font-size:78px;
+  line-height:0.95;
+  font-weight:700;
+
+  color:#111111;
+
+  margin-bottom:28px;
+}
+
+.training-heading p{
+  max-width:760px;
+  margin:0 auto;
+
+  font-size:17px;
+  line-height:1.9;
+
+  color:#7b7b7b;
+}
+
+.training-cards{
+  margin-top:70px;
+
+  display:flex;
+  justify-content:center;
+  gap:28px;
+  flex-wrap:wrap;
+}
+
+.training-box{
+  position:relative;
+
+  width:450px;
+  min-height:350px;
+
+  background:#ffffff;
+
+  border-radius:26px;
+
+  padding:48px 42px 40px;
+
+  border:1px solid #ececec;
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,.03),
+  0 30px 70px rgba(0,0,0,.04);
+
+  transition:.25s ease;
+}
+
+.training-box:hover{
+  transform:translateY(-6px);
+}
+
+.training-box.featured{
+  border:1px solid #d8b084;
+}
+
+.top-badge{
+  position:absolute;
+  top:-14px;
+  left:28px;
+
+  background:#7ea5c4;
+
+  color:white;
+
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.6px;
+
+  padding:8px 16px;
+
+  border-radius:999px;
+
+  box-shadow:0 10px 25px rgba(126,165,196,.18);
+}
+
+.training-icon{
+  width:72px;
+  height:72px;
+
+  margin:0 auto 28px;
+
+  border-radius:50%;
+
+  background:#f1f5f8;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  color:#6d93b1;
+
+  font-size:28px;
+}
+
+.training-box h3{
+  font-family:"Cormorant Garamond",serif;
+
+  font-size:28px;
+  line-height:1.15;
+  font-weight:700;
+
+  color:#111111;
+
+  margin-bottom:22px;
+}
+
+.training-box p{
+  font-size:16px;
+  line-height:1.9;
+
+  color:#7d7d7d;
+}
+
+.training-price{
+  margin-top:28px;
+
+  font-family:"Cormorant Garamond",serif;
+  font-size:26px;
+  font-weight:700;
+
+  color:#3f79a8;
+}
+
+.training-main-btn{
+  margin-top:38px;
+
+  display:inline-flex;
+  align-items:center;
+  gap:14px;
+
+  background:#3f79a8;
+  color:white;
+
+  text-decoration:none;
+
+  padding:18px 30px;
+
+  border-radius:12px;
+
+  font-weight:700;
+  font-size:16px;
+
+  transition:.25s ease;
+
+  box-shadow:0 16px 35px rgba(63,121,168,.20);
+}
+
+.training-main-btn:hover{
+  background:#2d6795;
+  transform:translateY(-2px);
+}
+
+@media(max-width:1100px){
+
+  .training-heading h2{
+    font-size:58px;
+  }
+
+  .training-cards{
+    gap:22px;
+  }
+
+  .training-box{
+    width:320px;
+  }
+
+}
+
+@media(max-width:850px){
+
+  .training-heading h2{
+    font-size:48px;
+  }
+
+  .training-box{
+    width:100%;
+    max-width:420px;
+  }
+
+}
+
+@media(max-width:650px){
+
+  .training-premium{
+    padding:85px 6% 90px;
+  }
+
+  .training-heading h2{
+    font-size:42px;
+    line-height:1;
+  }
+
+  .training-heading p{
+    font-size:15px;
+    line-height:1.8;
+  }
+
+  .training-box{
+    padding:44px 28px 34px;
+    border-radius:22px;
+  }
+
+  .training-box h3{
+    font-size:24px;
+  }
+
+  .training-box p{
+    font-size:15px;
+  }
+
+  .training-main-btn{
+    width:100%;
+    justify-content:center;
+  }
+
+}
+/* mobile hero */
+@media(max-width:650px){
+  .hero{
+    background:
+      linear-gradient(
+        90deg,
+        rgba(0,0,0,.93) 0%,
+        rgba(20,22,24,.82) 48%,
+        rgba(20,22,24,.35) 100%
+      ),
+      url("hero.png");
+    background-size:cover;
+    background-position:62% center;
+  }
+}
+.portfolio-split{
+  padding:95px 7% 115px;
+
+  background:
+    radial-gradient(circle at top, rgba(79,159,216,.10), transparent 30%),
+    linear-gradient(180deg,#0f1115 0%, #171c23 100%);
+}
+
+.portfolio-head{
+  text-align:center;
+  margin-bottom:58px;
+}
+
+.portfolio-head span{
+  display:block;
+  color:#4f9fd8;
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:7px;
+  text-transform:uppercase;
+  margin-bottom:14px;
+}
+
+.portfolio-head h2{
+  font-family:"Cormorant Garamond",serif;
+  font-size:58px;
+  line-height:1;
+  font-weight:700;
+  color:white;
+}
+
+.portfolio-split-grid{
+  max-width:1500px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:54px;
+}
+
+.portfolio-panel{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:16px;
+  padding:46px 36px 36px;
+  text-align:center;
+  backdrop-filter:blur(10px);
+  box-shadow:0 20px 60px rgba(0,0,0,.35);
+}
+
+.portfolio-panel.creative{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.portfolio-panel h3{
+  font-family:"Cormorant Garamond",serif;
+  font-size:42px;
+  line-height:1;
+  font-weight:700;
+  color:white;
+  margin-bottom:14px;
+}
+
+.portfolio-panel p{
+  color:#b7c0ca;
+  font-size:17px;
+  line-height:1.6;
+  margin-bottom:38px;
+}
+
+.portfolio-photos{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+}
+
+.portfolio-photos img{
+  width:100%;
+  aspect-ratio:1 / 1;
+  object-fit:cover;
+  border-radius:8px;
+  display:block;
+  box-shadow:0 20px 40px rgba(0,0,0,.45);
+}
+
+.portfolio-more{
+  margin:34px auto 0;
+  width:390px;
+  max-width:100%;
+
+  height:54px;
+  border-radius:8px;
+
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:70px;
+
+  background:white;
+  border:1px solid #d4d9de;
+
+  color:#222;
+  text-decoration:none;
+  font-size:16px;
+  font-weight:700;
+
+  transition:.25s ease;
+}
+
+.portfolio-more:hover{
+  background:#111;
+  color:white;
+  border-color:#111;
+}
+
+@media(max-width:1100px){
+  .portfolio-split-grid{
+    grid-template-columns:1fr;
+    max-width:760px;
+  }
+
+  .portfolio-head h2{
+    font-size:48px;
+  }
+}
+
+@media(max-width:650px){
+  .portfolio-split{
+    padding:75px 6% 85px;
+  }
+
+  .portfolio-head h2{
+    font-size:42px;
+  }
+
+  .portfolio-panel{
+    padding:34px 18px 26px;
+    border-radius:14px;
+  }
+
+  .portfolio-panel h3{
+    font-size:34px;
+  }
+
+  .portfolio-panel p{
+    font-size:15px;
+    margin-bottom:28px;
+  }
+
+  .portfolio-photos{
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+  }
+
+  .portfolio-more{
+    gap:35px;
+  }
+}@media(max-width:650px){
+
+  .portfolio-split-grid{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+
+  .portfolio-panel{
+    padding:22px 12px 18px;
+  }
+
+  .portfolio-panel h3{
+    font-size:26px;
+    margin-bottom:10px;
+  }
+
+  .portfolio-panel p{
+    font-size:13px;
+    margin-bottom:18px;
+    line-height:1.5;
+  }
+
+  .portfolio-photos{
+    grid-template-columns:repeat(3,1fr);
+    gap:5px;
+  }
+
+ 
+  .portfolio-photos img{
+    border-radius:5px;
+  }
+
+  .portfolio-more{
+    width:100%;
+    height:44px;
+    margin-top:18px;
+
+    font-size:13px;
+    gap:14px;
+  }
+
+}
+/* ukryte zdjęcia */
+
+.hidden-photo{
+  display:none;
+}
+
+/* lightbox */
+
+.portfolio-lightbox{
+  position:fixed;
+  inset:0;
+
+  background:rgba(0,0,0,.92);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  opacity:0;
+  pointer-events:none;
+
+  transition:.25s ease;
+
+  z-index:9999;
+}
+
+.portfolio-lightbox.open{
+  opacity:1;
+  pointer-events:auto;
+}
+
+.portfolio-lightbox img{
+  max-width:90%;
+  max-height:88vh;
+
+  border-radius:10px;
+}
+
+.portfolio-close{
+  position:absolute;
+  top:24px;
+  right:34px;
+
+  color:white;
+
+  font-size:46px;
+  cursor:pointer;
+}
+.reviews-clean{
+  padding:95px 7% 110px;
+  background:
+    radial-gradient(circle at top center, rgba(106,175,201,.08), transparent 32%),
+    linear-gradient(180deg,#f8fafc 0%,#eef4f8 100%);
+}
+
+.reviews-clean-head{
+  text-align:center;
+  margin-bottom:56px;
+}
+
+.reviews-clean-head span{
+  display:block;
+  margin-bottom:18px;
+  color:#2f7fb1;
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:6px;
+  text-transform:uppercase;
+}
+
+.reviews-clean-head h2{
+  font-family:"Cormorant Garamond",serif;
+  font-size:72px;
+  line-height:1;
+  font-weight:600;
+  color:#0d1220;
+  margin-bottom:22px;
+}
+
+.reviews-clean-head h2 em{
+  color:#4b8ec2;
+  font-style:italic;
+  font-weight:500;
+}
+
+.reviews-clean-head p{
+  color:#5f6670;
+  font-size:18px;
+  font-weight:500;
+}
+
+.reviews-clean-grid{
+  max-width:1450px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+}
+
+.review-clean-card{
+  min-height:275px;
+  background:rgba(255,255,255,.86);
+  border:1px solid rgba(210,222,232,.9);
+  border-radius:20px;
+  padding:36px 36px 30px;
+  box-shadow:0 24px 60px rgba(40,70,95,.07);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.review-mark{
+  color:#3f86bf;
+  font-family:"Cormorant Garamond",serif;
+  font-size:64px;
+  line-height:.6;
+  font-weight:700;
+  margin-bottom:18px;
+}
+
+.review-clean-card p{
+  color:#111827;
+  font-size:16px;
+  line-height:1.75;
+  font-weight:500;
+}
+
+.review-line{
+  height:1px;
+  background:#dce6ee;
+  margin:28px 0 22px;
+}
+
+.review-bottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:18px;
+}
+
+.review-bottom h3{
+  font-family:"Cormorant Garamond",serif;
+  color:#111827;
+  font-size:25px;
+  line-height:1;
+  margin-bottom:10px;
+  font-weight:700;
+}
+
+.review-bottom small{
+  color:#596273;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:2.5px;
+}
+
+.review-rating{
+  padding:11px 15px;
+  border-radius:12px;
+  background:#f1f6fb;
+  color:#2f7fb1;
+  font-size:15px;
+  letter-spacing:2px;
+  white-space:nowrap;
+  font-weight:800;
+}
+
+.review-rating strong{
+  margin-right:8px;
+  letter-spacing:0;
+}
+
+.reviews-clean-center{
+  text-align:center;
+  margin-top:44px;
+}
+
+.reviews-clean-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:22px;
+  height:58px;
+  padding:0 38px;
+  border-radius:14px;
+  border:1.5px solid #4b8ec2;
+  background:white;
+  color:#2f7fb1;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:800;
+  letter-spacing:1.5px;
+  transition:.25s ease;
+}
+
+.reviews-clean-btn:hover{
+  background:#111;
+  color:white;
+  border-color:#111;
+}
+
+@media(max-width:1050px){
+  .reviews-clean-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .reviews-clean-head h2{
+    font-size:56px;
+  }
+}
+
+@media(max-width:650px){
+  .reviews-clean{
+    padding:75px 6% 85px;
+  }
+
+  .reviews-clean-head h2{
+    font-size:42px;
+  }
+
+  .reviews-clean-head p{
+    font-size:15px;
+  }
+
+  .reviews-clean-grid{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  .review-clean-card{
+    min-height:auto;
+    padding:30px 24px 26px;
+  }
+
+  .review-bottom{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+  .review-rating{
+    width:100%;
+    text-align:center;
+  }
+
+  .reviews-clean-btn{
+    width:100%;
+    padding:0 18px;
+    font-size:12px;
+  }
+}
+footer .logo,
+footer .footer-logo{
+  color:#111111 !important;
+}
+
+footer .footer-logo span{
+  color:#4f5358 !important;
+}@media(max-width:650px){
+  .hero{
+    background:
+      linear-gradient(
+        90deg,
+        rgba(0,0,0,.93) 0%,
+        rgba(20,22,24,.82) 48%,
+        rgba(20,22,24,.35) 100%
+      ),
+      url("hero.png") !important;
+    background-size:cover !important;
+    background-position:75% center !important;
+  }
+}
+.years{
+ font-family:"Playfair Display", serif;
+  font-weight:300;
+  font-size:.9em;
+  color:white !important;
+}
+  </style>
+  </head>
+
+  <body>
+
+ <header id="header">
+  <a href="#home" class="logo">
+    <div class="logo-text">Wizaż & Fotografia<br>Paulina Piotrowska</div>
+  </a>
+
+  <button class="menu-toggle" id="menuToggle">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+
+  <nav id="navMenu">
+    <a href="#about">O mnie</a>
+    <a href="#szkolenia">Szkolenia</a>
+    <a href="#offer">Oferta</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#opinie">Opinie</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+
+  <a href="#kontakt" class="btn btn-primary header-btn">Umów termin</a>
+</header>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+<h1>
+<span class="years">11</span> lat pasji<br>
+w świecie makijażu
+</h1>
+<p>
+Szkolenia makijażowe, makijaże okolicznościowe i pakiety ślubne.
+<br><br>
+Warszawa i okolice.
+</p>
+      <div class="hero-actions">
+        <a href="#szkolenia" class="btn btn-primary">Zapisz się na szkolenie <i class="fa-regular fa-calendar"></i></a>
+        <a href="#portfolio" class="btn btn-outline">Zobacz portfolio <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about-wrap">
+      <div class="about-img">
+        <img src="omnie.png" alt="">
+      </div>
+
+      <div class="about-text">
+        <div class="label">O MNIE</div>
+        <h2>Cześć, jestem <span>Paulina</span></h2>
+        <div class="decor">♡</div>
+       <p>
+Pomagam kobietom poczuć się pięknie, pewnie i kobieco —
+zarówno poprzez profesjonalny makijaż, jak i indywidualne szkolenia makijażowe.
+</p>
+        <p>Nieustannie się rozwijam, śledzę najnowsze trendy i pracuję na profesjonalnych kosmetykach, aby zapewnić trwałość i perfekcyjny efekt.</p>
+        <div class="signature">Paulina Piotrowska</div>
+        <div class="sign-small">WIZAŻYSTKA I FOTOGRAFKA</div>
+      </div>
+    </div>
+  </section>
+  <section class="training-premium" id="szkolenia">
+
+  <div class="training-heading">
+    <span>SZKOLENIA MAKIJAŻOWE</span>
+
+    <h2>Naucz się pięknego makijażu</h2>
+
+    <p>
+      Kameralne lekcje i szkolenia prowadzone w eleganckiej, spokojnej atmosferze —
+      od makijażu na własny użytek po profesjonalne techniki pracy.
+    </p>
+  </div>
+
+  <div class="training-cards">
+
+    <div class="training-box featured">
+
+      <div class="top-badge">
+        NAJCZĘŚCIEJ WYBIERANE
+      </div>
+
+      <div class="training-icon">
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+      </div>
+
+      <h3>Lekcja makijażu<br>na własny użytek</h3>
+
+      <p>
+        Naucz się wykonywać makijaż dopasowany
+        do swojej urody, kosmetyków i codziennych
+        potrzeb krok po kroku.
+      </p>
+
+      <div class="training-price">
+        od 350 zł
+      </div>
+
+    </div>
+
+    <div class="training-box">
+
+      <div class="training-icon">
+        <i class="fa-regular fa-id-card"></i>
+      </div>
+
+      <h3>Szkolenie<br>indywidualne</h3>
+
+      <p>
+        Praca 1:1, profesjonalne techniki, dobór
+        produktów, analiza urody i praktyczne
+        wskazówki do dalszego rozwoju.
+      </p>
+
+      <div class="training-price">
+        od 700 zł
+      </div>
+
+    </div>
+
+    <div class="training-box">
+
+      <div class="training-icon">
+        <i class="fa-solid fa-gift"></i>
+      </div>
+
+      <h3>Szkolenie dla<br>początkujących</h3>
+
+      <p>
+        Idealne dla osób, które chcą rozpocząć
+        przygodę z makijażem, nabrać pewności i
+        poznać solidne podstawy.
+      </p>
+
+      <div class="training-price">
+        od 400 zł
+      </div>
+
+    </div>
+
+  </div>
+
+  <a href="#" class="training-main-btn">
+    Zapisz się na szkolenie
+    <i class="fa-solid fa-arrow-right"></i>
+  </a>
+
+</section>
+  <section class="offer" id="offer">
+  <div class="label">OFERTA</div>
+  <h2 class="title">Oferta makijaży</h2>
+
+  <div class="service-list">
+
+    <div class="service-row">
+      <div>
+        <h3>Makijaż dzienny</h3>
+        <p>Lekki, świeży makijaż na co dzień, spotkanie lub delikatną sesję zdjęciową.</p>
+      </div>
+      <span>od 150 zł</span>
+    </div>
+
+    <div class="service-row">
+      <div>
+        <h3>Makijaż wieczorowy</h3>
+        <p>Wyrazisty glam z podkreślonym okiem i trwałym efektem na całą noc.</p>
+      </div>
+      <span>od 200 zł</span>
+    </div>
+
+    <div class="service-row">
+      <div>
+     <h3>Pakiet ślubny</h3>
+<p>Pakiet obejmujący makijaż ślubny oraz możliwość dojazdu.</p>
+      </div>
+     <span>wycena indywidualna</span>
+    </div>
+
+    <div class="service-row">
+      <div>
+        <h3>Makijaż do sesji zdjęciowej</h3>
+        <p>Makijaż przygotowany pod światło, aparat i charakter konkretnej sesji.</p>
+      </div>
+      <span>od 200 zł</span>
+    </div>
+
+    <div class="service-row">
+      <div>
+        <h3>Fotografia beauty</h3>
+        <p>Portrety beauty, zbliżenia makijażu i kobiece kadry w profesjonalnym stylu.</p>
+      </div>
+      <span>od 250 zł</span>
+    </div>
+
+    <div class="service-row">
+      <div>
+        <h3>Pakiet makijaż + zdjęcia</h3>
+        <p>Kompletna usługa: makijaż, stylizacja beauty i zdjęcia gotowe do publikacji.</p>
+      </div>
+      <span>od 450 zł</span>
+    </div>
+
+  </div>
+
+  <div class="center">
+    <a href="#kontakt" class="btn btn-primary">
+      Zapytaj o termin <i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </div>
+</section>
+ <section class="portfolio-split" id="portfolio">
+  <div class="portfolio-head">
+    <span>PORTFOLIO</span>
+    <h2>Zobacz moje prace</h2>
+  </div>
+
+  <div class="portfolio-split-grid">
+<div class="portfolio-panel">
+  <h3>Makijaże użytkowe</h3>
+  <p>Eleganckie makijaże okolicznościowe i beauty</p>
+
+  <div class="portfolio-photos">
+    <img src="1.jpeg" alt="">
+    <img src="3.jpeg" alt="">
+    <img src="4.jpeg" alt="">
+
+    <img src="8.jpeg" alt="">
+
+    <img src="14.jpeg" alt="">
+    
+
+    <img src="Praca_2.png" alt="">
+    <img src="Praca_6.png" alt="">
+    <img src="Praca_7.png" alt="">
+  </div>
+
+
+</div>
+
+<div class="portfolio-panel creative">
+  <h3>Makijaże kreatywne</h3>
+  <p>Artystyczne projekty, kolor i pełna ekspresja</p>
+
+  <div class="portfolio-photos">
+    <img src="Praca_1.png" alt="">
+    <img src="Praca_3.png" alt="">
+    <img src="Praca_4.png" alt="">
+     <img src="2.jpeg" alt="">
+    <img src="Praca_5.png" alt="">
+     <img src="13.jpeg" alt="">
+    <img src="Praca_8.png" alt="">
+    <img src="18.jpeg" alt="">
+
+  </div>
+
+</div>
+    </div>
+
+  </div>
+</section>
+
+  <section class="why">
+    <div class="label">DLACZEGO WARTO</div>
+    <h2 class="title">Dlaczego warto mi zaufać?</h2>
+
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="icon"><img src="gosciu.png" alt=""></div>
+        <h3>Indywidualne podejście</h3>
+        <p>Każda klientka jest wyjątkowa. Słucham Twoich potrzeb i tworzę makijaż dopasowany do Ciebie.</p>
+      </div>
+
+      <div class="why-item">
+        <div class="icon"><img src="tarcza.png" alt=""></div>
+        <h3>Trwały efekt</h3>
+        <p>Pracuję na profesjonalnych kosmetykach i sprawdzonych technikach, które gwarantują trwałość.</p>
+      </div>
+
+      <div class="why-item">
+        <div class="icon"><img src="aparat.png" alt=""></div>
+       <h3>Makijaż stworzony pod aparat</h3>
+<p>Dbam o światło, detale i wykończenie, aby makijaż wyglądał świetnie zarówno na żywo, jak i w obiektywie.</p>
+      </div>
+    </div>
+  </section>
+
+<section class="reviews-clean" id="opinie">
+  <div class="reviews-clean-head">
+    <span>OPINIE KLIENTEK</span>
+    <h2>Co mówią moje <em>klientki?</em></h2>
+    <p>Makijaż, fotografia i atmosfera, które zostają w pamięci na długo.</p>
+  </div>
+
+  <div class="reviews-clean-grid">
+
+    <div class="review-clean-card">
+      <div class="review-mark">“</div>
+      <p>Makijaż pierwsza klasa! 😊<br>Polecam serdecznie ❤️</p>
+      <div class="review-line"></div>
+      <div class="review-bottom">
+        <div>
+          <h3>Weronika</h3>
+          <small>SESJA CIĄŻOWA</small>
+        </div>
+        <div class="review-rating"><strong>5,0</strong> ★★★★★</div>
+      </div>
+    </div>
+
+    <div class="review-clean-card">
+      <div class="review-mark">“</div>
+      <p>Utalentowana Wizaż & Fotografia –<br>Paulina Piotrowska 😊 ❤️ 👻</p>
+      <div class="review-line"></div>
+      <div class="review-bottom">
+        <div>
+          <h3>Małgorzata</h3>
+          <small>MAKIJAŻ NA HALLOWEEN</small>
+        </div>
+        <div class="review-rating"><strong>5,0</strong> ★★★★★</div>
+      </div>
+    </div>
+
+    <div class="review-clean-card">
+      <div class="review-mark">“</div>
+      <p>Petarda ! ❤️</p>
+      <div class="review-line"></div>
+      <div class="review-bottom">
+        <div>
+          <h3>Paulina</h3>
+          <small>KLASYCZNY MAKIJAŻ</small>
+        </div>
+        <div class="review-rating"><strong>5,0</strong> ★★★★★</div>
+      </div>
+    </div>
+
+    <div class="review-clean-card">
+      <div class="review-mark">“</div>
+      <p>Bardzo piękna praca. Foteczki są<br>obłędne 🥰 Gratulacje i życzę<br>dalszych sukcesów 🥰</p>
+      <div class="review-line"></div>
+      <div class="review-bottom">
+        <div>
+          <h3>Karolina</h3>
+          <small>MAKIJAŻ OKOLICZNOŚCIOWY</small>
+        </div>
+        <div class="review-rating"><strong>5,0</strong> ★★★★★</div>
+      </div>
+    </div>
+
+    <div class="review-clean-card">
+      <div class="review-mark">“</div>
+      <p>Najlepsza w branży ❤️</p>
+      <div class="review-line"></div>
+      <div class="review-bottom">
+        <div>
+          <h3>Martyna</h3>
+          <small>MAKIJAŻ BUTTERFLY LOOK</small>
+        </div>
+        <div class="review-rating"><strong>5,0</strong> ★★★★★</div>
+      </div>
+    </div>
+
+    <div class="review-clean-card">
+      <div class="review-mark">“</div>
+      <p>Dziękuję za kolejny piękny makijaż 🥰<br>Jesteś Najlepsza ❣️</p>
+      <div class="review-line"></div>
+      <div class="review-bottom">
+        <div>
+          <h3>Kasia</h3>
+          <small>MAKIJAŻ NA SESJĘ ŚLUBNĄ</small>
+        </div>
+        <div class="review-rating"><strong>5,0</strong> ★★★★★</div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+  <section class="contact" id="kontakt">
+    <div class="label">KONTAKT</div>
+<h2 class="title">Zapisz się na szkolenie lub makijaż</h2>
+    <div class="contact-wrap">
+      <div class="contact-card">
+        <h3>Dane kontaktowe</h3>
+
+        <div class="contact-row">
+          <i class="fa-solid fa-phone"></i>
+          <span>725 502 787</span>
+        </div>
+
+        <div class="contact-row">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Warszawa i okolice</span>
+        </div>
+
+        <div class="contact-row">
+          <i class="fa-regular fa-clock"></i>
+          <span>Poniedziałek – Sobota<br>8:00 – 20:00</span>
+        </div>
+
+        <div class="socials">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/Piotrowska.beautyart/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+
+        <div class="contact-buttons">
+          <a href="tel:725502787" class="btn btn-primary">Zadzwoń teraz</a>
+          <a href="#form" class="btn" style="border:1px solid var(--line);color:var(--rose);background:white;">Napisz wiadomość</a>
+        </div>
+      </div>
+
+      <form id="form" action="https://formspree.io/f/TWOJ_KOD" method="POST">
+        <div class="form-grid">
+         <input type="text" id="name" name="name" placeholder="Imię i nazwisko">
+         <input type="tel" id="phone" name="phone" placeholder="Telefon">
+<input type="text" id="service" name="service" placeholder="Czego dotyczy wiadomość? np. szkolenie, makijaż, ślub" style="grid-column:1/-1;">
+          
+          <textarea id="message" name="message" placeholder="Wiadomość"></textarea>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Wyślij wiadomość <i class="fa-regular fa-paper-plane"></i></button>
+        <div class="success" id="success">Dziękujemy! Wiadomość została przygotowana do wysłania.</div>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-main">
+      <div class="logo footer-logo">
+   Wizaż & Fotografia<br><span style="font-size:12px;letter-spacing:2px;font-family:Inter,sans-serif;font-weight:500;opacity:.8;"> Paulina Piotrowska</span>
+      </div>
+
+     <p>
+Szkolenia makijażowe, makijaże okolicznościowe i kobiece beauty experience
+dla kobiet, które chcą wyglądać i czuć się wyjątkowo.
+</p>
+
+      <p><i class="fa-solid fa-phone"></i> 725 502 787<br><i class="fa-solid fa-location-dot"></i><span> Warszawa i okolice</span></p>
+
+      <div class="socials">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.facebook.com/Piotrowska.beautyart/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+    © 2026 Wizaż & Fotografia Paulina Piotrowska. Wszelkie prawa zastrzeżone.
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox">
+    <span id="close">&times;</span>
+    <img id="lightboxImg" src="">
+  </div>
+
+  <script>
+  const header = document.getElementById("header");
+
+  window.addEventListener("scroll", () => {
+    header.classList.toggle("scrolled", window.scrollY > 80);
+
+    document.querySelectorAll("section[id]").forEach(sec => {
+      const top = window.scrollY;
+      const offset = sec.offsetTop - 120;
+      const height = sec.offsetHeight;
+      const id = sec.getAttribute("id");
+
+      if(top >= offset && top < offset + height){
+        document.querySelectorAll("nav a").forEach(a => a.classList.remove("active"));
+        const active = document.querySelector(`nav a[href="#${id}"]`);
+        if(active) active.classList.add("active");
+      }
+    });
+  });
+/* === LIGHTBOX === */
+
+const lightbox = document.createElement("div");
+lightbox.className = "portfolio-lightbox";
+
+lightbox.innerHTML = `
+  <span class="portfolio-close">&times;</span>
+  <img src="" alt="">
+`;
+
+document.body.appendChild(lightbox);
+
+const lightboxImg = lightbox.querySelector("img");
+const closeBtn = lightbox.querySelector(".portfolio-close");
+
+document.querySelectorAll(".portfolio-photos img").forEach(img => {
+
+  img.addEventListener("click", () => {
+    lightbox.classList.add("open");
+    lightboxImg.src = img.src;
+  });
+
+});
+
+closeBtn.addEventListener("click", () => {
+  lightbox.classList.remove("open");
+});
+
+lightbox.addEventListener("click", e => {
+  if(e.target === lightbox){
+    lightbox.classList.remove("open");
+  }
+});
+
+
+  </script>
+
+  </body>
+  </html>
